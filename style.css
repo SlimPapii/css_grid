@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* grid 1 */
+.grid1{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 0.5fr 1fr 2.2fr;
+    grid-template-areas: 'sidebar navbar'
+    'sidebar navbar2'
+    'sidebar main';
+    height: 50vh;
+}
+.grid1 > div{
+    text-align: center;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: #336699;
+}
+.navbar{
+    grid-area: navbar;
+    background: cyan;
+}
+.navbar2{
+    grid-area: navbar2;
+    padding-top: auto;
+    background: chocolate;
+}
+.main{
+    grid-area: main;
+    background: cornflowerblue;
+}
+/* grid 2 */
+.grid2{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: 'box1 box2 box3';
+    height: 30vh;
+    column-gap: 10px;
+    margin-top: 40px;
+}
+.grid2 > div{
+    text-align: center;
+}
+.box1{
+    grid-area: box1;
+    background: darkblue;
+}
+.box2{
+    grid-area: box2;
+    background: darkgray;
+}
+.box3{
+    grid-area: box3;
+    background: darkred
+    ;
+}
+/* grid3 */
+.grid3{
+    display: grid;
+    grid-template-columns: 2fr 0.3fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'box4 box5 box6'
+    'box4 box5 box7';
+    height: 30vh;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-top: 40px;
+}
+.grid3 > div{
+    text-align: center;
+}
+.box4{
+    grid-area: box4;
+    background: darkblue;
+}
+.box5{
+    grid-area: box5;
+    background: darkgray;
+}
+.box6{
+    grid-area: box6;
+    background: darkred
+    ;
+}
+.box7{
+    grid-area: box7;
+    background: darkred
+    ;
+}
+/* grid4 */
+.grid4{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    height: 20vh;
+    margin-top: 20px;
+}
+.box8{
+    text-align: center;
+    background: darkgreen;
+}
+@media screen and (max-width: 576px){
+    .grid1{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 0.3fr 0.5fr 1.5fr 1fr;
+        grid-template-areas: 'navbar'
+        'navbar2'
+        'sidebar'
+        'main';
+        row-gap: 5px;
+    }
+    .grid2{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 'box1'
+        'box2'
+        'box3';
+        row-gap: 5px;
+    }
+    .grid3{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 'box4'
+        'box5'
+        'box6'
+        'box7';
+        row-gap: 5px;
+    }
+    .grid4{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 'box8';
+        row-gap: 5px;
+    }
+
+}
